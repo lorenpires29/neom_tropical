@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+
+:root {
+    --bg-color: #0b2956;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+    background-color: var(--bg-color);
+}
+
+/* Header Corrigido */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 30px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    box-sizing: border-box;
+}
+
+header .logo {
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+header nav ul li a:hover {
+    opacity: 1;
+}
+
+/* Estrutura de Slides */
+.item {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.8s ease-in-out;
+}
+
+.item.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Título Gigante ao Fundo */
+.item .title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 15vw;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    opacity: 0.1;
+    position: absolute;
+    z-index: 1;
+    margin: 0;
+    transition: 1s ease-in-out;
+    transform: scale(0.8);
+}
+
+.item.active .title {
+    transform: scale(1);
+    opacity: 0.2;
+}
+
+/* Frutas (O segredo do ajuste) */
+.item .fruit {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Preenche a tela sem distorcer */
+    position: absolute;
+    z-index: 2;
+    pointer-events: none;
+    transition: 1.2s ease;
+    opacity: 0;
+}
+
+.item.active .fruit {
+    opacity: 1;
+}
+
+/* Produto (Lata) */
+.item .refri {
+    height: 75vh;
+    width: 65vh;
+    position: relative;
+    z-index: 3;
+    filter: drop-shadow(0 20px 50px rgba(0,0,0,0.5));
+    transition: 0.8s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+    transform: translateY(100px);
+    opacity: 0;
+}
+
+.item.active .refri {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Botão de Compra */
+.buy-btn {
+    position: absolute;
+    bottom: 10%;
+    z-index: 10;
+    padding: 15px 45px;
+    border-radius: 50px;
+    border: none;
+    background: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.buy-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Navegação */
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.2);
+    border: 1px solid rgba(255,255,255,0.4);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 20;
+}
+
+#prev { left: 30px; }
+#next { right: 30px; }
+
+.dots {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 20;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background: rgba(255,255,255,0.3);
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.dot.active {
+    background: white;
+    width: 30px;
+    border-radius: 5px;
+}
