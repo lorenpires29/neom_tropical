@@ -3,60 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href='img/img2.png'>
     <title>Neom Tropical | Sinta a Energia</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 </head>
 <body>
     <header>
         <div class="logo">NEOM <span>TROPICAL</span></div>
         <nav>
             <ul>
-                <li><a href="#">Sabores</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Contato</a></li>
+                <li><a href="#sabores">Sabores</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <div class="item active" style="--background: #0b2956">
-            <h1 class="title">Guaraná <br>Tropical</h1>
-            <img src="img/fundo1.png" class="fruit" alt="Frutas Fundo">
-            <img src="img/img1.png" class="refri" alt="Lata Neom">
-            <button class="buy-btn">Experimentar</button>
+    <main class="main-content">
+        <div class="hero">
+            <div class="item active" style="--background: #0b2956">
+                <h1 class="title">Guaraná <br>Tropical</h1>
+                <img src="img/fundo1.png" class="fruit" alt="Frutas Fundo">
+                <img src="img/img1.png" class="refri" alt="Lata Neom">
+                <button class="buy-btn">Experimentar</button>
+            </div>
+
+            <div class="item" style="--background: #5dcad1">
+                <h1 class="title">Maracujá <br>Refrescante</h1>
+                <img src="img/fundo2.png" class="fruit" alt="Frutas Fundo">
+                <img src="img/img2.png" class="refri" alt="Lata Neom">
+                <button class="buy-btn">Experimentar</button>
+            </div>
+
+            <div class="item" style="--background: #ac1f22">
+                <h1 class="title">Frutas <br>Cítricas</h1>
+                <img src="img/fundo3.png" class="fruit" alt="Frutas Fundo">
+                <img src="img/img3.png" class="refri" alt="Lata Neom">
+                <button class="buy-btn">Experimentar</button>
+            </div>
+
+            <div class="item" style="--background: #432351">
+                <h1 class="title">Frutas <br>Vermelhas</h1>
+                <img src="img/fundo4.png" class="fruit" alt="Frutas Fundo">
+                <img src="img/img4.png" class="refri" alt="Lata Neom">
+                <button class="buy-btn">Experimentar</button>
+            </div>
+
+            <button id="prev" class="nav-btn">&lt;</button>
+            <button id="next" class="nav-btn">&gt;</button>
+
+            <div class="dots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
         </div>
 
-        <div class="item" style="--background: #5dcad1">
-            <h1 class="title">Maracujá <br>Refrescante</h1>
-            <img src="img/fundo2.png" class="fruit" alt="Frutas Fundo">
-            <img src="img/img2.png" class="refri" alt="Lata Neom">
-            <button class="buy-btn">Experimentar</button>
-        </div>
 
-        <div class="item" style="--background: #ac1f22">
-            <h1 class="title">Frutas <br>Cítricas</h1>
-            <img src="img/fundo3.png" class="fruit" alt="Frutas Fundo">
-            <img src="img/img3.png" class="refri" alt="Lata Neom">
-            <button class="buy-btn">Experimentar</button>
-        </div>
+        <section id="sabores" class="section-dark">
+            <div class="container">
+                <div class="section-header">
+                    <h1>NOSSOS SABORES</h1>
+                    <p>Explore a linha completa de Neom Tropical e encontre sua dose diária de refrescância.</p>
+                </div>
+                
+                <div class="sabor-grid">
+                    <div class="sabor-card">
+                        <div class="card-img"><img src="img/img1.png"></div>
+                        <h3>GUARANÁ TROPICAL</h3>
+                        <p>A energia pura da Amazônia com um toque cítrico refrescante.</p>
+                        <button class="card-btn">COMPRAR</button>
+                    </div>
+                    <div class="sabor-card">
+                        <div class="card-img"><img src="img/img2.png"></div>
+                        <h3>MARACUJÁ REFRESCANTE</h3>
+                        <p>O equilíbrio perfeito entre o doce e o azedo para os dias de sol.</p>
+                        <button class="card-btn">COMPRAR</button>
+                    </div>
+                    <div class="sabor-card">
+                        <div class="card-img"><img src="img/img3.png"></div>
+                        <h3>FRUTAS CÍTRICAS</h3>
+                        <p>Uma explosão de vitamina C com limão, laranja e tangerina.</p>
+                        <button class="card-btn">COMPRAR</button>
+                    </div>
+                    <div class="sabor-card">
+                        <div class="card-img"><img src="img/img4.png"></div>
+                        <h3>FRUTAS VERMELHAS</h3>
+                        <p>Sabor intenso de morangos, framboesas e mirtilos silvestres.</p>
+                        <button class="card-btn">COMPRAR</button>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <div class="item" style="--background: #432351">
-            <h1 class="title">Frutas <br>Vermelhas</h1>
-            <img src="img/fundo4.png" class="fruit" alt="Frutas Fundo">
-            <img src="img/img4.png" class="refri" alt="Lata Neom">
-            <button class="buy-btn">Experimentar</button>
-        </div>
+        <section id="sobre" class="section-dark about-section">
+            <div class="container about-flex">
+                <div class="about-img-container">
+                    <img src="img/sobre-foto.jpg" class="main-about-img" alt="Frescor Neom">
+                </div>
+                <div class="about-text">
+                    <h1>NASCIDA NOS <br><span>TRÓPICOS</span></h1>
+                    <p>A Neom Tropical surgiu do desejo de engarrafar a essência vibrante das nossas florestas. Utilizamos processos de extração a frio para garantir que você receba o melhor em cada gole.</p>
+                    <button class="outline-btn">NOSSA HISTÓRIA</button>
+                </div>
+            </div>
+        </section>
 
-        <button id="prev" class="nav-btn">&lt;</button>
-        <button id="next" class="nav-btn">&gt;</button>
-
-        <div class="dots">
-            <div class="dot active"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-        </div>
+        <section id="contato" class="section-dark contact-section">
+            <div class="container contact-card">
+                <div class="contact-info md-2">
+                    <h2>FALE COM A NEOM</h2>
+                    <p>Dúvidas, sugestões ou parcerias?</p>
+                </div>
+                <form class="contact-form">
+                    <div class="input-group">
+                        <input type="text" placeholder="Seu Nome" required>
+                        <input type="email" placeholder="Seu E-mail" required>
+                    </div>
+                    <textarea placeholder="Sua Mensagem" rows="4"></textarea>
+                    <button type="submit" class="submit-btn">ENVIAR AGORA</button>
+                </form>
+            </div>
+        </section>
     </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 Neom Tropical. Sinta a Natureza.</p>
+            <div class="social-icons" >
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram" ></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
 
     
     <script src="scripts.js"></script>
